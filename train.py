@@ -150,8 +150,7 @@ for round in range(config['num_round']):
         # np.save('model_parameter/' + str(config['ind']) + config['dataset'] + '-' + 'client_param-2.npy', engine.client_model_params)
 
 current_time = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
-str = current_time + ' - ' + 'num_round: ' + str(config['num_round']) \
-    + str(config['neighborhood_threshold']) + ' - ' + 'reg: ' + str(config['reg']) + ' - ' + str(config['l2_regularization']) + ' - ' + 'method: ' + config['alias']
+str = current_time + ' - ' + 'num_round: ' + str(config['num_round']) + ' - ' + 'reg: ' + str(config['reg']) + ' - ' + 'l2_regularization: ' + str(config['l2_regularization']) + ' - ' + 'method: ' + config['alias']
 file_name = "sh_result/"+config['construct_graph_source']+'-'+config['dataset']+".txt"
 with open(file_name, 'a') as file:
     file.write(str + '\n')
