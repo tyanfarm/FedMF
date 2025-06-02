@@ -55,7 +55,7 @@ fedmf = FedMF(num_users=num_users, num_items=num_items, num_factors=32, learning
 user_interactions, val_data, test_data = fedmf.split_data(interactions)
 
 # Save configuration and results
-message_discord = f"\n**Dataset: {config['dataset']}**\n```method: {config['alias']}, lr: {str(config['lr'])}, l2_reg: {str(config['l2_reg'])}, num_epochs: {str(config['num_epochs'])}\n```\n"
+message_discord = f"\n**Dataset: {config['dataset']}**\n```method: {config['alias']}, lr: {str(config['lr'])}, l2_reg: {str(config['l2_reg'])}, num_epochs: {str(config['num_epochs'])}\n```"
 
 # Train model
 fedmf.train(user_interactions, val_data, test_data, num_epochs=config['num_epochs'], msg_discord=message_discord)
