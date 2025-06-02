@@ -10,6 +10,8 @@ from data import UserItemRatingDataset
 from torch.utils.data import DataLoader
 from torch.distributions.laplace import Laplace
 
+import gc
+
 
 class Engine(object):
     """Meta Engine for training & evaluating NCF model
